@@ -1,0 +1,205 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+/* body::webkit-wi */
+body::-webkit-scrollbar{
+    background-color: gray;
+    border-radius: 10px;
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background:linear-gradient(green,blue,black);
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover{
+    background:linear-gradient(green,blue,black,yellow,tomato);
+}
+
+.main{
+}
+.box {
+  width: 400px;
+  height: 500px;
+  background-image: url(https://plus.unsplash.com/premium_photo-1696617442026-fed64a32826f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60);
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+/* .box img{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+    transform: 2s;
+
+} */
+.overley {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(green, black);
+  position: absolute;
+  bottom: -100%;
+  text-align: center;
+  font-family: sans-serif;
+  color: #fff;
+  padding: 20px;
+  transition: all ease 2s;
+}
+.box:hover .overley {
+  bottom: 0;
+}
+
+/* main2 */
+.box2 {
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+}
+
+.box3 {
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    padding: 10px;
+    background-image: linear-gradient(
+  45deg,
+  hsl(240deg 100% 20%) 0%,
+  hsl(311deg 100% 25%) 5%,
+  hsl(334deg 100% 40%) 10%,
+  hsl(6deg 98% 61%) 15%,
+  hsl(37deg 100% 50%) 20%,
+  hsl(55deg 100% 50%) 25%,
+  hsl(47deg 100% 50%) 30%,
+  hsl(39deg 100% 50%) 35%,
+  hsl(30deg 100% 50%) 40%,
+  hsl(20deg 100% 50%) 45%,
+  hsl(0deg 100% 50%) 50%,
+  hsl(32deg 100% 44%) 55%,
+  hsl(55deg 100% 36%) 60%,
+  hsl(88deg 58% 53%) 65%,
+  hsl(146deg 77% 63%) 70%,
+  hsl(173deg 100% 59%) 75%,
+  hsl(132deg 69% 69%) 80%,
+  hsl(68deg 54% 52%) 85%,
+  hsl(38deg 81% 49%) 90%,
+  hsl(10deg 100% 62%) 95%,
+  hsl(331deg 100% 50%) 100%
+);
+
+}
+.box3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.box3 img:hover{
+    scale: 1.4;
+}
+
+.box4{
+    width: 300px;
+    height: 500px;
+}
+.box4 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: drop-shadow(10px 10px 20px black);
+}
+
+.box5{
+    margin: 0px 20px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.box5 h1{
+    color: transparent;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+   position: relative;
+}
+
+
+.box5 h1::after{
+    content: "";
+    background-color: black;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    transition: 0.5s;
+}
+
+.box5 h1:hover::after{
+    width: 100%;
+
+}
+.box5 h1::selection{
+        background-color: black;
+        color: #fff;
+    
+}
+
+
+.box6{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* background-color: black; */
+    border: 7px solid gray;
+    border-top: 7px solid black;
+    animation: anim infinite 1.5s;
+}
+
+@keyframes anim{
+    100%{
+        rotate: 360deg;
+    }
+}
+
+
+
+.main7{
+    width: 100%;
+    height: 400px;
+    background-color: red;
+    /* flex-wrap: nowrap; */
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 10px;
+}
+
+.main7 .box7{
+    width: 300px;
+    height: 100%;
+    background-color: forestgreen;
+    display: inline-block;
+
+    
+}
